@@ -1,0 +1,244 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{tipa}
+\usepackage{appendixnumberbeamer}
+
+\newcommand\Wider[2][3em]{
+\makebox[\linewidth][c]{
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright#2
+  \end{minipage}
+  }
+}
+
+\newcommand{\Bz}{$B_0$}
+
+\usetheme{Frankfurt}
+
+\title[BnoC Status Report]{BnoC Status Report}
+\author[Tim Williams]{Tim Williams on behalf of the BnoC PWG}
+\institute[Birmingham]{84th \lhcb week}
+\titlegraphic{\includegraphics[height=2.1cm]{UoBLogo}}%\hspace*{2cm}\includegraphics[height=2cm]{LhcbLogo}}
+\date{13/06/2017}
+
+\usepackage{ifthen} 
+\newboolean{uprightparticles}
+\setboolean{uprightparticles}{false} %Set true for upright particle symbols
+\usepackage{xspace} 
+\usepackage{upgreek}
+
+\input{lhcb-symbols-def}
+%%%%Symbols%%%%
+
+\def\etaorpr {\ensuremath{\Peta^{(\prime)}}\xspace}
+
+%%%%Decays%%%%
+
+\def\BdEtapKs    {\decay{\Bd}{\KS\etapr}\xspace}
+\def\BdEtaKs     {\decay{\Bd}{\KS\Peta}\xspace}
+\def\BdEtaEtapKs {\decay{\Bd}{\KS\etaorpr}\xspace}
+
+
+\def\BdEtapKz    {\decay{\Bd}{\Kz\etapr}\xspace}
+\def\BdEtaKz     {\decay{\Bd}{\Kz\Peta}\xspace}
+\def\BdEtaEtapKz {\decay{\Bd}{\Kz\etaorpr}\xspace}
+
+\def\LbEtapL     {\decay{\Lb}{\Lz\etapr}\xspace}
+\def\LbEtaL      {\decay{\Lb}{\Lz\Peta}\xspace}
+\def\LbEtaEtapL  {\decay{\Lb}{\Lz\etaorpr}\xspace}
+
+\def\EtaGG       {\decay{\Peta}{\gamma\gamma}\xspace}
+\def\EtaPiPiPi   {\decay{\Peta}{\pip\pim\piz}\xspace}
+\def\EtapPiPiG   {\decay{\etapr}{\pip\pim\gamma}\xspace}
+\def\EtapPiPiEta {\decay{\etapr}{\pip\pim\Peta}\xspace}
+
+
+\def\BdEtapKsPiPiEta {\BdEtapKs(\EtapPiPiEta)\xspace}
+\def\BdEtaKsPiPiPiz {\BdEtaKs(\EtaPiPiPi)\xspace}
+
+\def\LbEtapLPiPiG {\LbEtapL(\EtapPiPiG)\xspace}
+\def\LbEtapLPiPiEta {\LbEtapL(\EtapPiPiEta)\xspace}
+\def\LbEtaLPiPiPiz {\LbEtaL(\EtaPiPiPi)\xspace}
+
+\def\LbpkEtaz {\decay{\Lb}{\proton\kaon\etaz}\xspace}
+\def\LbpkEtaorpr {\decay{\Lb}{\proton\kaon\etaorpr}\xspace}
+\def\LbpkEtapr {\decay{\Lb}{\proton\kaon\etapr}\xspace}
+
+\def\BpKetapr {\decay{\Bp}{\Kp \etapr}\xspace}
+
+\def\LbPkPhi {\decay{\Lb}{\proton\kaon\phi}}
+\def\PhiPiPiPi {\decay{\phi}{\pip\pim\piz}}
+
+%%%%%%% PID Variables %%%%%%%
+\def\probnnpi {$ProbNN_{\pi}$\xspace}
+\def\probnnk {$ProbNN_{\kaon}$\xspace}
+\def\probnnp {$ProbNN_{\proton}$\xspace}
+\def\dllp {$\mathrm{DLL_{\pion\proton}}$\xspace}
+\def\dllk {$\mathrm{DLL_{\kaon\proton}}$\xspace}
+
+
+
+
+\begin{document}
+%_________________________________ TITLE SLIDE ___________________________________
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{PWG Organisation}
+  \begin{itemize}
+  \item WG Convenors: \textbf{Stefano Perazzini, Sean Benson}
+  \item Sub-WG Convenors:
+    \begin{itemize}
+    \item 3 Body: \textbf{Rafael Coutinho, Eli Ben-Haim}
+    \item 2 \& 4 Body: \textbf{Roberta Cardinale, Laurence Carson}
+    \end{itemize}
+  \item Regular BiWeekly Meetings: \textbf{Thursdays 2PM}
+  \end{itemize}
+  \begin{center}
+    \href{https://twiki.cern.ch/twiki/bin/viewauth/LHCbPhysics/BnoCTwikiPage}{\textcolor{blue}{Link to BnoC Twiki Page}}
+  \end{center}
+\end{frame}
+
+\begin{frame}{PWG Liaisons}
+  \begin{exampleblock}{Current Liaisons}
+    \begin{itemize}
+    \item Simulation: \textbf{Maria Vieites Diaz} \\
+    \item Stripping: \textbf{Alvaro Gomes Dos Santos Neto} \\
+    \item Trigger: \textbf{Andrea Merli} \\
+    \item Tracking: \textbf{Gediminas Sarpis} \\
+    \item Flavour Tagging: \textbf{Julian Garcia} \\
+    \item PID: \textbf{Abhijit Mathiad} \\
+    \item Calo Tools: \textbf{Jason Andrews} \\
+    \item Statistics and ML Tools:\textbf{Timon Schmelzer}
+    \end{itemize}
+  \end{exampleblock}
+  \begin{center}
+    \LARGE{Thanks for all your work!}
+  \end{center}
+\end{frame}
+
+\begin{frame}{BnoC Physics Case}
+  \begin{itemize}
+  \item Study decays of \bquark -hadrons to charmless hadronic final states:
+    \begin{itemize}
+    \item \decay{\bquark}{\uquark} tree level decays
+    \item \decay{\bquark}{\squark, \dquark} penguin decays
+  \end{itemize}
+\item Measurements of branching fractions and CPV observables provide tests of standard model and searches for new physics
+\item \textbf{2 \& 4 Body Examples:} Searches for \decay{\PB}{baryon} decays, Angular analysis of \decay{\PB}{VV} decays, time (in)dependent CPV
+\item \textbf{3 Body Examples:} Dalitz analyses and CPV observables, Bc decays, searches for unobserved decays
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{BnoC Activities}
+  \begin{itemize}
+  \item \textbf{Currently in review:}
+    6 Analyses in WG review, 7 with review committee \& 1 in collaboration wide review
+  \item \textbf{Since last \lhcb week:}
+    \begin{itemize}
+    \item 2 Papers Published:
+      \begin{itemize}
+      \item $4.1\sigma$ evidence for the decay \decay{\Bp}{\proton \Lbar} (LHCb-PAPER-2016-048)\\
+      \item Upper limit on \BF(\decay{\Bs}{\phiz \etapr}) $< 0.82 \times 10^{-6}$ at $90\%$ CL. (LHCB-PAPER-2016-060)
+      \end{itemize}
+    \item 2 Papers Submitted:
+      \begin{itemize}
+      \item First observation of a baryonic \Bs decay (LHCB-PAPER-2017-012)
+      \item Observation of the charmless baryonic decays \decay{\PB^{0}_{(s)}}{\proton \antiproton h^{+} h^{-}} (LHCb-PAPER-2017-005)
+      \end{itemize}
+    \end{itemize}
+  \item 32 Analyses in preperation - only able to present a few today.
+  \item Details of all past and present analyses can be found in the \href{https://lhcb-wg.web.cern.ch/lhcb-WG/bnoc/list.py}{\textcolor{blue}{WG database}}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{centering}
+    \begin{block}{}
+      {\centering \Huge \decay{\PB^{0}_{(s)}}{\proton\antiproton} Update}
+    \end{block}
+  \end{centering}
+\end{frame}
+
+\begin{frame}{\decay{\PB^{0}_{(s)}}{\proton\antiproton} Motivation and Status}
+  \begin{block}{Motivation}
+    \begin{itemize}
+    \item No baryonic 2 body charmless $\PB^{0}$ decay has been observed.
+    \item \decay{\PB^{0}_{(s)}}{\proton\antiproton} decays predicted to be simplest to search for experimentally
+    \end{itemize}
+  \end{block}
+  \begin{itemize}
+  \item Previous analysis using 2011 data saw $3.3\sigma$ evidence for \decay{\Bd}{\proton\antiproton} but no evidence for the suppressed \decay{\Bs}{\proton\antiproton} seen.
+  \item Hopefully addition of 2012 data can lead to an observation.
+  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.65\textwidth}
+      \begin{itemize}
+      \item Branching fraction results using 2011 data: \\
+        \BF(\decay{\Bd}{\proton\antiproton})$ = (1.47^{+0.62+0.35}_{-0.51-0.14})\times 10^{-8}$\\
+        \BF(\decay{\Bs}{\proton \antiproton})$ = (2.84^{+2.03 +0.85}_{-1.68 -0.18}) \times 10^{-8}$
+      \item All previous theory calculations ruled out by at least 1 order of magnitude!
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.34\textwidth}
+      \includegraphics[width=\textwidth]{2011PPbar.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Selection}
+  \begin{itemize}
+  \item PID Selection optimises \dllppi and \dllpk cuts for Punzi FoM with $a=5\sigma$
+  \item MVA selection (applied after PID selection) makes use of MLP with 10 variables, again optimised for Punzi FoM.
+    \begin{center}
+      \includegraphics[width=.4\textwidth]{PPOptimisation.pdf}
+      \includegraphics[width=.4\textwidth]{PPBarPIDOptimisation.pdf}
+    \end{center}
+  \item Normalisation channel, \decay{\Bd}{\Kp\pim}, PID selection optimised for maximum selection efficiency whilst rejecting various mis-ID backgrounds.    % READ.
+  \item Similar MLP also used in normalisation channel, but optimised for signal significance.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fits}
+  \begin{itemize}
+  \item \textbf{Normalisation channel:} Mass fit seperated by charge due to known production assymmetries
+  \end{itemize}
+  \begin{center}
+    \includegraphics[width=0.35\textwidth]{PPNormMassFit.pdf}
+    \includegraphics[width=0.35\textwidth]{PPNormMassFitBar.pdf}
+  \end{center}
+  \begin{itemize}
+  \item \textbf{Signal channel:} Only signal and combinatorial background present - $38.7\pm8.4(stat only)$ \decay{\Bd}{\proton\antiproton} decays observed!
+    % \item $N(\decay{\Bd}{\proton\antiproton} = 38.7\pm8.4 (stat only)$ and $N(\decay{\Bs}{\proton\antiproton} = 1.5\pm4.4 (stat only)$.
+    \begin{center}
+      \includegraphics[width=.4\textwidth]{PPSignalMassFit.pdf}
+    \end{center}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Results and Outlook}
+  \begin{itemize}
+  \item First obeservation of \decay{\Bd}{\proton \antiproton} with significance of $5.3\sigma$ -first obseration of 2 body charmless baryonic \Bd decay!
+  \item \BF(\decay{\Bd}{\proton \antiproton})$ = (1.25\pm0.27\pm0.18) \times 10^{-8}$.
+  \item \decay{\Bs}{\proton \antiproton} yield of only $1.5\pm4.4$ events, limit set using Feldman-Cousins method.
+    \begin{center}
+      \includegraphics[width=0.4\textwidth]{PPBarFC.pdf}
+    \end{center}
+  \item \BF(\decay{\Bs}{\proton \antiproton})$ < 1.5 \times 10^{-8} $ at $90\%$ confidence level.
+  \item Analysis close to publication, paper currently in collaboration wide review.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  {\centering \Huge \LbpkEtapr }
+\end{frame}
+
+  
+\appendix
+\begin{frame}{Backup}
+  Backup
+\end{frame}
+
+\end{document}
