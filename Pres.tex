@@ -14,7 +14,7 @@
 
 \newcommand{\Bz}{$B_0$}
 
-\usetheme{Frankfurt}
+\usetheme{Madrid}
 
 \title[BnoC Status Report]{BnoC Status Report}
 \author[Tim Williams]{Tim Williams on behalf of the BnoC PWG}
@@ -105,7 +105,7 @@
   \begin{exampleblock}{Current Liaisons}
     \begin{itemize}
     \item Simulation: \textbf{Maria Vieites Diaz} \\
-    \item Stripping: \textbf{Alvaro Gomes Dos Santos Neto} \\
+    \item Stripping: \textbf{Tim Williams (Stepping Down) \& Alvaro Gomes Dos Santos Neto} \\
     \item Trigger: \textbf{Andrea Merli} \\
     \item Tracking: \textbf{Gediminas Sarpis} \\
     \item Flavour Tagging: \textbf{Julian Garcia} \\
@@ -120,16 +120,25 @@
 \end{frame}
 
 \begin{frame}{BnoC Physics Case}
-  \begin{itemize}
-  \item Study decays of \bquark -hadrons to charmless hadronic final states:
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+      \item Study decays of \bquark -hadrons to charmless hadronic final states:
+        \begin{itemize}
+        \item \decay{\bquark}{\uquark} tree level decays
+        \item \decay{\bquark}{\squark, \dquark} penguin decays
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \includegraphics[width=\textwidth]{PenguinTree.jpg}
+    \end{column}
+  \end{columns}
     \begin{itemize}
-    \item \decay{\bquark}{\uquark} tree level decays
-    \item \decay{\bquark}{\squark, \dquark} penguin decays
-  \end{itemize}
-\item Measurements of branching fractions and CPV observables provide tests of standard model and searches for new physics
-\item \textbf{2 \& 4 Body Examples:} Searches for \decay{\PB}{baryon} decays, Angular analysis of \decay{\PB}{VV} decays, time (in)dependent CPV
-\item \textbf{3 Body Examples:} Dalitz analyses and CPV observables, Bc decays, searches for unobserved decays
-  \end{itemize}
+    \item Measurements of branching fractions and CPV observables provide tests of standard model and searches for new physics
+    \item \textbf{2 \& 4 Body Examples:} Searches for \decay{\PB}{baryon} decays, Angular analysis of \decay{\PB}{VV} decays, time (in)dependent CPV
+    \item \textbf{3 Body Examples:} Dalitz analyses and CPV observables, Bc decays, searches for unobserved decays
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{BnoC Activities}
@@ -155,11 +164,12 @@
 \end{frame}
 
 \begin{frame}
-  \begin{centering}
+  \begin{center}
     \begin{block}{}
-      {\centering \Huge \decay{\PB^{0}_{(s)}}{\proton\antiproton} Update}
+      \centering \Huge \decay{\PB^{0}_{(s)}}{\proton\antiproton} Update
     \end{block}
-  \end{centering}
+    \href{https://lhcb-wg.web.cern.ch/lhcb-WG/bnoc/listentry.py?name=2011\%2B12+B+-\%3E+p+pbar+BFs\&cat=analysis}{\textcolor{blue}{Link to WG Database}}
+  \end{center}
 \end{frame}
 
 \begin{frame}{\decay{\PB^{0}_{(s)}}{\proton\antiproton} Motivation and Status}
@@ -189,6 +199,7 @@
 \end{frame}
 
 \begin{frame}{Selection}
+  \small
   \begin{itemize}
   \item PID Selection optimises \dllppi and \dllpk cuts for Punzi FoM with $a=5\sigma$
   \item MVA selection (applied after PID selection) makes use of MLP with 10 variables, again optimised for Punzi FoM.
@@ -202,14 +213,13 @@
 \end{frame}
 
 \begin{frame}{Fits}
+  \small
   \begin{itemize}
   \item \textbf{Normalisation channel:} Mass fit seperated by charge due to known production assymmetries
-  \end{itemize}
   \begin{center}
-    \includegraphics[width=0.35\textwidth]{PPNormMassFit.pdf}
-    \includegraphics[width=0.35\textwidth]{PPNormMassFitBar.pdf}
+    \includegraphics[width=0.32\textwidth]{PPNormMassFit.pdf}
+    \includegraphics[width=0.32\textwidth]{PPNormMassFitBar.pdf}
   \end{center}
-  \begin{itemize}
   \item \textbf{Signal channel:} Only signal and combinatorial background present - $38.7\pm8.4(stat only)$ \decay{\Bd}{\proton\antiproton} decays observed!
     % \item $N(\decay{\Bd}{\proton\antiproton} = 38.7\pm8.4 (stat only)$ and $N(\decay{\Bs}{\proton\antiproton} = 1.5\pm4.4 (stat only)$.
     \begin{center}
@@ -233,8 +243,9 @@
 
 \begin{frame}
   \begin{block}{}
-    {\centering Amplitude analysis of \Large \decay{\Bd}{\rhoz(\pi \pi)\Kstarz(\Kp\pim)} decays}
+    \centering Amplitude analysis of \Large \decay{\Bd}{(\pip \pim)(\Kp\pim)} decays
   \end{block}
+  \centering \href{https://lhcb-wg.web.cern.ch/lhcb-WG/bnoc/listentry.py?name=2011\%2B12+B+-\%3E+K\%2A0+rho0+BF\&cat=analysis}{\textcolor{blue}{Link to WG database}}
 \end{frame}
 
 \begin{frame}{The \decay{\Bd}{\rhoz(\pi \pi)\Kstarz(\Kp\pim)} decay}
@@ -339,10 +350,10 @@
   \begin{block}{}
     \centering \Huge Search for the decay  \LbpkEtapr
   \end{block}
+  \centering \href{https://lhcb-wg.web.cern.ch/lhcb-WG/bnoc/listentry.py?name=2011\%2B12+Lb+-\%3E+p+K+eta\%28\%27\%29+BFs\&cat=analysis}{\textcolor{blue}{Link to WG database}}
 \end{frame}
 
 \begin{frame}{Motivation}
-  \Wider{
   \begin{itemize}
   \item \etapr still not fully understood - size of gluon component in meson wavefunction?
     \begin{equation}
@@ -352,7 +363,6 @@
   \item The decay of a \bquark baryon to an \etaorpr final state has never been observed, completely unexplored area of charmless B physics.
   \item $3\sigma$ evidence seen for \LbEtaL at \lhcb, $\mathcal{B}  = 9.3^{+7.3}_{-5.3} \times 10^{-6}$, and limit set on \LbEtapL, $\mathcal{B}<3.1 \times 10^{-6}$ (90\%) (LHCB-PAPER-2015-019).
   \end{itemize}
-  }
 \end{frame}
 
 \begin{frame}{Analysis Strategy}
@@ -375,8 +385,8 @@
   \begin{itemize}
   \item Train seperate BDTs for each rare channel and optimise for Punzi FoM with $\sigma=5$.
     \begin{center}
-      \includegraphics[width=.45\textwidth]{2012IOPpipig.pdf}
-      \includegraphics[width=.45\textwidth]{pipieta12IOP.pdf}
+      \includegraphics[width=.41\textwidth]{2012IOPpipig.pdf}
+      \includegraphics[width=.41\textwidth]{pipieta12IOP.pdf}
     \end{center}
   \item Similar BDT used for normalisation channel but optimised for signal significance.
   \item 3D PID optimisation performed, results in tight cuts on \texttt{ProbNN} PID variables for Proton and Kaon, looser cuts for Pions.
@@ -389,10 +399,9 @@
 
 \begin{frame}{Efficiency Calculation Procedure}
 \begin{itemize}
-\Wider{\item Rich resonant structure expected in M(\proton \Km) spectrum but not a priori known.
-  }
+\item Rich resonant structure expected in M(\proton \Km) spectrum but not a priori known.
   \begin{columns}
-    \column{.5\textwidth}
+    \column{.49\textwidth}
     \begin{block}{if Significance \textgreater $5\sigma$}
       \begin{itemize}
       \item Bin efficiency in square Dalitz plot (SDP) variables m' and $\theta'$.
@@ -404,7 +413,7 @@
         where $\epsilon_i$ is efficiency in the bin of SDP occupied by event i.
       \end{itemize}
     \end{block}
-    \column{.5\textwidth}
+    \column{.49\textwidth}
     \begin{itemize}
     \item Need to take into account efficiency variation over phase space of \LbpkEtapr decay.
     \end{itemize}
@@ -497,18 +506,17 @@
       \end{itemize}
     \end{column}
   \end{columns}
-  \begin{center}\includegraphics[width=.8\textwidth]{NewCPVChannels.pdf}\end{center}
+  \begin{center}\includegraphics[width=.75\textwidth]{NewCPVChannels.pdf}\end{center}
 \end{frame}
 
 \begin{frame}{Run II Update}
+  \small
   \begin{itemize}
   \item Run II update of CPV analyses planned.
   \item Expect factor $\sim3$ increase in signal yield with addition of 2016 and 2017 data
-  \end{itemize}
   \begin{center}
     \includegraphics[width=.8\textwidth]{Run2FirstLook.pdf}
   \end{center}
-  \begin{itemize}
   \item First look at 2016 MagDown data shows promising yield - selection not optimised and cross-feed studies needed
   \end{itemize}
 \end{frame}
