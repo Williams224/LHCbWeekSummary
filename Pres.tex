@@ -232,9 +232,321 @@
 \end{frame}
 
 \begin{frame}
-  {\centering \Huge \LbpkEtapr }
+  \begin{block}{}
+    {\centering Amplitude analysis of \Large \decay{\Bd}{\rhoz(\pi \pi)\Kstarz(\Kp\pim)} decays}
+  \end{block}
 \end{frame}
 
+\begin{frame}{The \decay{\Bd}{\rhoz(\pi \pi)\Kstarz(\Kp\pim)} decay}
+  \begin{columns}
+    \begin{column}{.75\textwidth}
+      \begin{itemize}
+        \item Proceeds either via:
+        \begin{itemize}
+        \item A doubly Cabibbo suppressed tree
+        \item A gluonic \decay{\bquark}{\squark} penguin
+        \item Both have similar amplitudes, good for $a_{cp}$!
+        \end{itemize}
+      \item Self tagged decay: \\ \decay{\textcolor{red}{\Bd}}{\rhoz(\pi \pi)\Kstarz(\textcolor{red}{\Kp}\pim)} \\ \decay{\textcolor{red}{\Bdb}}{\rhoz(\pi \pi)\Kstarz(\textcolor{red}{\Km}\pip)}
+      \item \textbf{Aim:} Measure longitudinal polarisation fraction $f_L$, \ACP and accessible triple product assymmetries.
+      \item Amplitude analysis required to disentangle different helicity amplitudes and final states.
+      \end{itemize}
+    \end{column}
+    \begin{column}{.24\textwidth}
+      \includegraphics[width=\textwidth]{KstarRhoFeynman.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Event Selection}
+  \begin{itemize}
+  \item A BDT is used to reject combinatorial background, cut chosen rejects $~99\%$ of background samples whilst retaining $\geq90\%$ of signal MC.
+  \item Charm resonances removed with vetoes
+  \item Tight PID cuts remove most mis-ID backgrounds. \\ \vspace{0.2cm}
+    \begin{columns}
+      \begin{column}{0.6\textwidth}
+        \textbf{\decay{\Bs}{\Kstarz\Kstarzb} background:}
+        \begin{itemize}
+        \item PID cuts modified to create seperate sample with high purity of these events, M(\kaon\pion\kaon\pion) fitted to determine level of contamination.
+        \item Simulated \decay{\Bs}{\Kstarz\Kstarzb} events injected with negative weights to remove \decay{\Bs}{\Kstarz(\Km\pip)\Kstarzb(\Kp\pim)} background.
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.39\textwidth}
+        \includegraphics[width=\textwidth]{KstarKstarSelection.pdf}
+      \end{column}
+    \end{columns}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Four Body Mass Fit}
+  \begin{itemize}
+  \item \textbf{Aim: Perform fit to M(\pion\pion\kaon\pion) distribution and extract sWeights}
+  \item \decay{\PB^{0}_{(s)}}{(\Kp\pim)(\pip\pim)} peaks modelled with Hypatia function, combinatorial background modelled with exponential.
+    \includegraphics[width=.9\textwidth]{KstarRho4Bod.pdf}
+  \item Total of 11290 \decay{\Bd}{(\pip\pim)(\Kp\pim)} signal events.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Amplitude Analysis Formalism}
+  \begin{itemize}
+  \item Isobar model used to paramaterise the total \decay{\Bd}{(\pip\pim)(\Kp\pim)} decay amplitude:
+    \begin{equation}
+      A_{T}=\sum_i A_i \times g_i(\theta_{\pip\pim},\theta_{\Kp\pim},\phi) \times M_i(m_{\pip\pim},m_{\Kp\pim})
+    \end{equation}
+  \item $g_i$ are the legendre polynomials describing the angular distributions
+  \item $M_i(\pip\pim,\Kp\pim)$ are functions to model the effective two body masses.
+  \end{itemize}
+  \includegraphics[width=.5\textwidth]{KstarRhozAngles.pdf}
+\end{frame}
+
+\begin{frame}{Amplitude Fit}
+  \scriptsize
+  \begin{itemize}
+  \item A PDF has been created to model 11 decay channels and 14 amplitudes.
+  \end{itemize}
+  \begin{columns}
+    \begin{column}{0.3\textwidth}
+      \textbf{Nominal Mass Propogators:}
+      \begin{itemize}
+      \item \textcolor{red}{\Kstarz, \Pomega, $f_0(500)$,$f_0(1370)$:}\\
+        Relativistic Breit-Wigner
+      \item \textcolor{red}{\rhoz:}\\
+        Gounaris-Sakurai
+      \item \textcolor{red}{$f_0(980)$:}\\
+        Flatte
+      \item \textcolor{red}{$(\kaon\pion)_0$}\\
+        LASS
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.69\textwidth}
+      \includegraphics[width=\textwidth]{KstarRhoAmplitudes.pdf}
+    \end{column}
+  \end{columns}
+  \begin{itemize}
+  \item Detector acceptance accounted for with normalisation weights
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Results and Outlook}
+  \includegraphics[width=.75\textwidth]{FiveBodyFitResults.pdf}
+  \begin{itemize}
+  \item All CPV observables still blind
+  \item Analysis in WG review.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{}
+    \centering \Huge Search for the decay  \LbpkEtapr
+  \end{block}
+\end{frame}
+
+\begin{frame}{Motivation}
+  \Wider{
+  \begin{itemize}
+  \item \etapr still not fully understood - size of gluon component in meson wavefunction?
+    \begin{equation}
+      \ket{\etapr} \approx \cos{\phi_{g}}\sin{\phi_{p}}\frac{1}{\sqrt{2}}\ket{\uubar + \ddbar} + \cos{\phi_{g}}\cos{\phi_{p}}\ket{\ssbar}+sin{\phi_g}\ket{gg}
+    \end{equation}
+    Latest measurement by \lhcb:  $\phi_{g}=(0\pm 24.6)\degrees$ (arXiv:1411.0943),  $\phi_{p} = (43.5^{+1.4}_{-1.3}) \degrees$.
+  \item The decay of a \bquark baryon to an \etaorpr final state has never been observed, completely unexplored area of charmless B physics.
+  \item $3\sigma$ evidence seen for \LbEtaL at \lhcb, $\mathcal{B}  = 9.3^{+7.3}_{-5.3} \times 10^{-6}$, and limit set on \LbEtapL, $\mathcal{B}<3.1 \times 10^{-6}$ (90\%) (LHCB-PAPER-2015-019).
+  \end{itemize}
+  }
+\end{frame}
+
+\begin{frame}{Analysis Strategy}
+  \begin{itemize}
+  \item Perform blind search for \LbpkEtapr using Run I data.
+  \item Reconstruct \etapr in two channels: \EtapPiPiG (BF=0.291) and \EtapPiPiEta (\EtaGG) (BF=0.169)
+  \item \BpKetapr (\EtapPiPiG) used as a control channel for both rare channels.
+    \begin{block}{Ratio of branching fractions extracted as:}
+      \begin{equation*}
+        \frac{\mathcal{B}(\Lb)}{\mathcal{B}(\Bp)} = \big(\frac{\epsilon_CN_\gamma}{\epsilon_\gamma N_C} + \frac{\epsilon_C N_\eta}{\epsilon_\eta N_C}\big)\frac{\mathcal{B}(\EtapPiPiG)}{\mathcal{B}(\EtapPiPiEta) + \mathcal{B}(\EtapPiPiG)} \frac{f_u}{f_\Lambda}
+      \end{equation*}
+    \end{block}
+  \item $N_C (\epsilon_C)$,$N_{\gamma} (\epsilon_{\gamma})$ and $ N_{\eta} (\epsilon_{\eta})$ are yields (efficiencies) in control, \EtapPiPiG and \EtapPiPiEta channels respecitvely.
+  \item Fit all channels simultaneously and extract ratio of branching fractions directly from fit.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Selection}
+  \small
+  \begin{itemize}
+  \item Train seperate BDTs for each rare channel and optimise for Punzi FoM with $\sigma=5$.
+    \begin{center}
+      \includegraphics[width=.45\textwidth]{2012IOPpipig.pdf}
+      \includegraphics[width=.45\textwidth]{pipieta12IOP.pdf}
+    \end{center}
+  \item Similar BDT used for normalisation channel but optimised for signal significance.
+  \item 3D PID optimisation performed, results in tight cuts on \texttt{ProbNN} PID variables for Proton and Kaon, looser cuts for Pions.
+  \item Specific mass vetoes for charm resonances and \decay{\Lb}{\proton \Km \pip \pim} decays.
+%  \item Require M(\pip \pim)\textgreater 510.0\mev in \EtapPiPiG channel to remove low mass background
+%  \item Require $480.0\mev < M(\etaz)_{DTF}< 620.0 \mev$ in \EtapPiPiEta channel.
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Efficiency Calculation Procedure}
+\begin{itemize}
+\Wider{\item Rich resonant structure expected in M(\proton \Km) spectrum but not a priori known.
+  }
+  \begin{columns}
+    \column{.5\textwidth}
+    \begin{block}{if Significance \textgreater $5\sigma$}
+      \begin{itemize}
+      \item Bin efficiency in square Dalitz plot (SDP) variables m' and $\theta'$.
+      \item Extract sWeights from mass fit - background subtraction.
+      \item Efficiency taken as:
+        \begin{equation}
+          \epsilon = \frac{\sum_i^{N}W_i}{\sum_i^{N}\frac{W_i}{\epsilon_i}}
+        \end{equation}
+        where $\epsilon_i$ is efficiency in the bin of SDP occupied by event i.
+      \end{itemize}
+    \end{block}
+    \column{.5\textwidth}
+    \begin{itemize}
+    \item Need to take into account efficiency variation over phase space of \LbpkEtapr decay.
+    \end{itemize}
+    \begin{block}{if Significance \textless $5\sigma$}
+      \begin{itemize}
+      \item Fill 1D histogram of efficiency for each bin of SDP.
+      \item Use mean value for efficiency and assign RMS as systematic uncertainty.
+      \end{itemize}
+    \end{block}
+  \end{columns}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Signal Channel Mass Fits}
+  \begin{itemize}
+  \item All signal shapes modelled with DCB
+  \item Combinatorial background modelled with exponential (2nd order polynomial) in rare (control) channel.
+  \item \EtapPiPiG channel also suffers from \decay{\Lb}{4h + \piz} background, modelled with bifurcated Gaussian - shape fixed to MC.
+  \end{itemize}
+  \includegraphics[width=.49\textwidth]{PiPiGFit.pdf} \includegraphics[width=.49\textwidth]{PiPiEta.pdf}
+\end{frame}
+
+\begin{frame}{Expected Sensitivity and Outlook}
+  \begin{itemize}
+  \item Toy studies have been performed for a range of \BF \xspace assumptions - statistical significance caluclated with Wilk's theorem.
+    \begin{center}
+      \includegraphics[width=.6\textwidth]{LbpketaprSensitivity.pdf}
+    \end{center}
+  \item $~77\%$ chance of $5\sigma$ observation if \BF(\LbpkEtapr)$=4\times10^{-6}$
+  \item Analysis in WG review.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{}
+    \centering \Huge Search for CP violation in \decay{\PXi_{b}}{\proton \Kp \Km} decays.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Overview}
+  \begin{itemize}
+  \item \decay{\PXi_{b}}{\proton \Kp \Km} was observed for the first time using Run I data
+  \item Next step is a search for CPV using amplitude analysis - $\geq \sim300$ events required.
+    \begin{center}\includegraphics[width=0.6\textwidth]{XiBFit.pdf}\end{center}
+  \item Plan to achieve this - Improve selection and add Run II data.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\decay{\PXi_{b}}{\proton \Kp \Km} Run I improvements}
+  \small
+  \begin{block}{Changes to Run I selection}
+    \begin{itemize}
+    \item Switch to using inclusive \texttt{Xb2phhLine} stripping line - $15\%$ improvement in stripping efficiency.
+    \item Include PID in MVA, use \texttt{xGBoost} algorithm and optimise for signal significance.
+    \end{itemize}
+  \end{block}
+  \begin{columns}
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+      \item Very preliminary fit to Run I data shows yield of $\sim 140$ events with new selection.
+      \item Should be able to observe $\geq \sim300$ signal events when Run II data is included.
+      \end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \includegraphics[width=\textwidth]{Run1ImprovedXib.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{CPV in \decay{\Lb}{\proton h h h}}
+  \begin{block}{}
+    \begin{center}
+      \Huge CPV in \decay{\Lb}{\proton h h h}
+    \end{center}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Current Status}
+  \small
+  \begin{columns}
+    \begin{column}{.4\textwidth}
+      \includegraphics[width=\textwidth]{Run1CPV.pdf}
+    \end{column}
+    \begin{column}{.65\textwidth}
+      \begin{itemize}
+      \item Using Run I data $3.3\sigma$ evidence for CPV in \decay{\Lb}{\proton \pim\pip\pim} decays was observed.
+      \item Used T-odd triple product asymmsetries.
+      \item First evidence for CPV in a baryon decay! \href{http://www.nature.com/nphys/journal/v13/n4/full/nphys4021.html}{\textcolor{blue}{Nature Physics 13 (2017)}}
+      \item More results from other deacy modes in review comittee!
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \begin{center}\includegraphics[width=.8\textwidth]{NewCPVChannels.pdf}\end{center}
+\end{frame}
+
+\begin{frame}{Run II Update}
+  \begin{itemize}
+  \item Run II update of CPV analyses planned.
+  \item Expect factor $\sim3$ increase in signal yield with addition of 2016 and 2017 data
+  \end{itemize}
+  \begin{center}
+    \includegraphics[width=.8\textwidth]{Run2FirstLook.pdf}
+  \end{center}
+  \begin{itemize}
+  \item First look at 2016 MagDown data shows promising yield - selection not optimised and cross-feed studies needed
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Energy Test}%jax2dtki
+  \begin{itemize}
+  \item Work under way to use energy test method to search for both P even and P odd CP violation - \href{https://arxiv.org/abs/1612.04705}{\textcolor{blue}{arxiv:1612.04705}}
+  \item Define test statistic based on distances between particles and anti-particles in phase space.
+  \end{itemize}
+  \includegraphics[width=.5\textwidth]{TestSta.pdf}\hspace{0.5cm}\includegraphics[width=.4\textwidth]{DistanceFunc.pdf}
+  \begin{columns}
+    \begin{column}{.49\textwidth}
+      \begin{itemize}
+      \item Sensitivity studies based on RunI + 2015 +2016 data performed using cocktail of RapidSim samples, CPV artificially introduced by increasing relative fraction of $\PDelta^{+}$ events by $30\%$.
+      \end{itemize}
+    \end{column}
+    \begin{column}{.49\textwidth}
+      \includegraphics[width=\textwidth]{SPVSensitivity.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Summary of \decay{\Lb}{\proton h h h} CPV searches}
+  \begin{itemize}
+  \item First evidence for CP violation has been seen in \decay{\Lb}{\proton \pim \pip \pim} decays at level of $3.3\sigma$ using Run I data - Run II update planned.
+  \item Run I results for \decay{\Lb}{\proton \Km \pip \pim}, \decay{\Lb}{\proton \Km \Kp \Km} and \decay{\Lb}{\proton \pip \Km \Km} decays still blind and in review comittee
+  \item Work started on using energy test method to search for CP violation in \decay{\Lb}{\proton \pim \pip \pim} decays using Run I+ Run II data.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusions}
+  \begin{itemize}
+  \item Lots of interesting work taking place in BnoC group on wide range of analyses.
+  \item Several analyses in review using Run I data
+  \item Many more analyses using Run II data in preperation: e.g \decay{\Bs}{\phiz \phiz} (in WG review), \decay{\Bc}{\Kp\Km\pip}, \decay{\Bs}{\KS \KS}, TD CPV in \decay{\PB^{0}_{(s)}}{hh} decays.
+  \item Lookout for dedicated talks on \decay{\Bp}{\pip\pim\pip} (Thursday) and \decay{\PB^{0}_{(s)}}{\KS h h} (Today).
+  \end{itemize}
+\end{frame}
   
 \appendix
 \begin{frame}{Backup}
