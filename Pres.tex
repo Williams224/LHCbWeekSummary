@@ -109,7 +109,7 @@
     \item Trigger: \textbf{Andrea Merli} \\
     \item Tracking: \textbf{Gediminas Sarpis} \\
     \item Flavour Tagging: \textbf{Julian Garcia} \\
-    \item PID: \textbf{Abhijit Mathiad} \\
+    \item PID: \textbf{Abhijit Mathad} \\
     \item Calo Tools: \textbf{Jason Andrews} \\
     \item Statistics and ML Tools:\textbf{Timon Schmelzer}
     \end{itemize}
@@ -449,44 +449,44 @@
 
 \begin{frame}
   \begin{block}{}
-    \centering \Huge Search for CP violation in \decay{\PXi_{b}}{\proton \Kp \Km} decays.
+    \centering \Huge Search for CP violation in \decay{\PXi_{b}^{-}}{\proton \Km \Km} decays.
   \end{block}
 \end{frame}
 
 \begin{frame}{Overview}
   \begin{itemize}
-  \item \decay{\PXi_{b}}{\proton \Kp \Km} was observed for the first time using Run I data
-  \item Next step is a search for CPV using amplitude analysis - $\geq \sim300$ events required.
+  \item \decay{\PXi_{b}}{\proton \Kp \Km} was observed for the first time using Run I data [Phys. Rev. Lett. 118, 071801].
+  \item Next step is a search for CPV, possibly using amplitude analysis.
     \begin{center}\includegraphics[width=0.6\textwidth]{XiBFit.pdf}\end{center}
-  \item Plan to achieve this - Improve selection and add Run II data.
+  \item More events required - Improve selection and add Run II data.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\decay{\PXi_{b}}{\proton \Kp \Km} Run I improvements}
+\begin{frame}{\decay{\PXi_{b}^{-}}{\proton \Km \Km} Run I improvements}
   \small
   \begin{block}{Changes to Run I selection}
     \begin{itemize}
     \item Switch to using inclusive \texttt{Xb2phhLine} stripping line - $15\%$ improvement in stripping efficiency.
-    \item Include PID in MVA, use \texttt{xGBoost} algorithm and optimise for signal significance.
+    \item Include PID and isolation variables in MVA, use \texttt{xGBoost} algorithm and optimise for signal significance.
     \end{itemize}
   \end{block}
   \begin{columns}
     \begin{column}{.5\textwidth}
       \begin{itemize}
-      \item Very preliminary fit to Run I data shows yield of $\sim 140$ events with new selection.
-      \item Should be able to observe $\geq \sim300$ signal events when Run II data is included.
+      \item Very preliminary fit to Run I data shows yield of $189\pm18$ events with new selection.
+      \item Should be able to observe enough signal events for CPV search when Run II data is included.
       \end{itemize}
     \end{column}
     \begin{column}{.5\textwidth}
-      \includegraphics[width=\textwidth]{Run1ImprovedXib.pdf}
+      \includegraphics[width=\textwidth]{Xib2KKp_data.pdf}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{CPV in \decay{\Lb}{\proton h h h}}
+\begin{frame}{CPV in \decay{\Lb/\PXi_{b}^{0}}{\proton h h h}}
   \begin{block}{}
     \begin{center}
-      \Huge CPV in \decay{\Lb}{\proton h h h}
+      \Huge CPV in \decay{\Lb/\PXi_{b}^{0}}{\proton h h h}
     \end{center}
   \end{block}
 \end{frame}
@@ -500,7 +500,7 @@
     \begin{column}{.65\textwidth}
       \begin{itemize}
       \item Using Run I data $3.3\sigma$ evidence for CPV in \decay{\Lb}{\proton \pim\pip\pim} decays was observed.
-      \item Used T-odd triple product asymmsetries.
+      \item Used triple product asymmsetries.
       \item First evidence for CPV in a baryon decay! \href{http://www.nature.com/nphys/journal/v13/n4/full/nphys4021.html}{\textcolor{blue}{Nature Physics 13 (2017)}}
       \item More results from other deacy modes in review comittee!
       \end{itemize}
@@ -539,11 +539,12 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Summary of \decay{\Lb}{\proton h h h} CPV searches}
+\begin{frame}{Summary of \decay{\Lb/\PXi_{b}^{0}}{\proton h h h} CPV searches}
   \begin{itemize}
   \item First evidence for CP violation has been seen in \decay{\Lb}{\proton \pim \pip \pim} decays at level of $3.3\sigma$ using Run I data - Run II update planned.
-  \item Run I results for \decay{\Lb}{\proton \Km \pip \pim}, \decay{\Lb}{\proton \Km \Kp \Km} and \decay{\Lb}{\proton \pip \Km \Km} decays still blind and in review comittee
-  \item Work started on using energy test method to search for CP violation in \decay{\Lb}{\proton \pim \pip \pim} decays using Run I+ Run II data.
+  \item Run I results for \decay{\Lb}{\proton \Km \pip \pim}, \decay{\Lb}{\proton \Km \Kp \Km} and \decay{\PXi_{b}^{0}}{\proton \pip \Km \Km} decays still blind and in review comittee.
+  \item Work started on using energy test method to search for CP violation in \decay{\Lb}{\proton \pim \pip \pim} decays using Run I + Run II data.
+  \item Further analyses aiming to measure \ACP and BFs for \decay{\Lb}{\proton hhh} decays are well advanced in the RC.
   \end{itemize}
 \end{frame}
 
@@ -551,7 +552,15 @@
   \begin{itemize}
   \item Lots of interesting work taking place in BnoC group on wide range of analyses.
   \item Several analyses in review using Run I data
-  \item Many more analyses using Run II data in preperation: e.g \decay{\Bs}{\phiz \phiz} (in WG review), \decay{\Bc}{\Kp\Km\pip}, \decay{\Bs}{\KS \KS}, TD CPV in \decay{\PB^{0}_{(s)}}{hh} decays.
+  \item Many more analyses using Run II data in preperation e.g:
+    \begin{itemize}
+    \item \decay{\Bs}{\phiz \phiz} (in WG review)
+    \item \decay{\Bc}{\Kp\Km\pip}
+    \item \decay{\Bs}{\KS \KS}
+    \item TD CPV in \decay{\PB^{0}_{(s)}}{hh} decays
+    \item CPV in \decay{\Lb}{\KS \proton h}
+    \item \decay{\PB}{3h} BFs
+    \end{itemize}
   \item Lookout for dedicated talks on \decay{\Bp}{\pip\pim\pip} (Thursday) and \decay{\PB^{0}_{(s)}}{\KS h h} (Today).
   \end{itemize}
 \end{frame}
